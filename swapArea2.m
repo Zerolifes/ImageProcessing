@@ -1,3 +1,4 @@
+% swap two random rectangle area in img
 close all;
 img = imread('image.png');
 subplot(2,2,1); imshow(img); title('original');

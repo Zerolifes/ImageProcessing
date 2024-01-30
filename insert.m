@@ -1,3 +1,4 @@
+% insert square area in img with coordinate is center
 function image = insert(img, area, center)
 sz = size(area);
 radius = floor(sz(1)/2);

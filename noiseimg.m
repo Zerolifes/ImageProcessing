@@ -1,3 +1,4 @@
+% create gaussian noise
 close all;
 img = imread('image.png');
 noise = normrnd(0,5,size(img));
