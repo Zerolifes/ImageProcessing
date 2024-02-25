@@ -1,0 +1,12 @@
+bài 8:
+thêm nhiễu normal N(0,5);
+H = [1 2 1;2 4 2;1 2 1]/16;
+H là thông thấp hay cao.
+bài 9: cho I là ảnh xám
+H = [1, -2, 1] là một bộ lọc
+thực hiện phép toán sau
+Y1 = I * H;
+Y2 = I * H';
+Y3 = abs(Y1)+abs(Y2);
+a) Hiển thị I,Y1,Y2, Y3, và nhận xét, H là bộ lọc thông thấp hay cao.
+b) thực hiện lại câu a nhưng thay I bằng ảnh bị tác động bởi nhiểu G như trong bài 8 nhận xét.
