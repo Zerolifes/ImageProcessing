@@ -1,0 +1,4 @@
+close all;
+object = "fui";
+figure; Idisplay(object);
+figure; Ispectrum(object);
