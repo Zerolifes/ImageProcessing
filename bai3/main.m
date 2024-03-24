@@ -1,0 +1,16 @@
+close all;
+image = imread('image/kodim14.png');
+[red, green, blue, bayer] = CalBayer(image);
+[deltaH, deltaV] = CalDelta(red, blue);
+G = CalGreen(deltaH, deltaV, green);
+[r1, b1] = Cal_RoB_BoR(red, blue, G);
+[r2, b2] = Cal_RoGB_BoGR(red, blue, G);
+[r3, b3] = Cal_RoGR_BoGB(red, blue, G);
+R = r1 + r2 + r3 + red;
+B = b1 + b2 + b3 + blue;
+RGBimage = zeros(size(image));
+RGBimage(:,:,1) = R;
+RGBimage(:,:,2) = G;
+RGBimage(:,:,3) = B;
+subplot(121); imshow(image); title('original');
+subplot(122); imshow(uint8(RGBimage)); title('processed image');
