@@ -1,0 +1,7 @@
+bài 11:
+Cho I là ảnh xám
+Trong miền tần số, gọi H là bộ lock thông thấp có tần số cắt D0 = 0.2; () biểu diễn tần số thuộc (-0.5 - 0.5).
+Hiển thị kết quả sau khi lọc. Nhận xét.
+
+Thay đổi giá trị D0, so sánh kết quả và nhận xét.
+bài 12: butterworth

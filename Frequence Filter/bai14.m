@@ -1,0 +1,15 @@
+close all;
+image = imread("kodim19.png");
+I = rgb2gray(image);
+spec = fftshift(fft2(I));
+figure;
+subplot(121); imshow(I); title('original');
+subplot(122); imshow(log(abs(spec)),[]); title("spectrum");
+N = 100;
+k = 20;
+[img, sk] = getsk(N,k,spec);
+figure;
+subplot(121); imshow(img); title('bandpass');
+subplot(122); imshow(log(abs(sk)),[]); title("spectrum");
+[m, n] = size(sk);
+S = ones(1,m) * abs(sk).^2 * ones(n,1);
