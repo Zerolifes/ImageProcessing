@@ -1,0 +1,16 @@
+close all;
+image = imread("kodim19.png");
+I = double(rgb2gray(image));
+spec = fftshift(fft2(I));
+figure;
+subplot(121); imshow(I,[]); title("original");
+subplot(122); imshow(log(abs(spec)),[]); title("spectrum");
+D1 = 0.2;
+D2 = 0.3;
+[img1, sp1] = Gaussian(D1,spec);
+[img2, sp2] = Gaussian(D2,spec);
+img = img2 - img1;
+sp = sp2 - sp1;
+figure;
+subplot(121); imshow(img,[]); title("bandpass");
+subplot(122); imshow(log(abs(sp)),[]); title("spectrum");
